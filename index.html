@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href ="animtext.css">
+    <link rel="stylesheet" href ="box.css">
+    <title>Hayk Zakaryan</title>
     <style>
+        
 
         canvas {
             margin-left: 33%;
@@ -42,12 +45,67 @@
     </style>  
 </head>
 <body>
-   <h1>GAME OF LIFE</h1>
-   <h2>HAYK ZAKARYAN</h2>
+    <h1 class="color-changing-text">GAME OF LIFE</h1>
+   <h2 class="color-changing-text">HAYK ZAKARYAN</h2>
 
    <script src="/socket.io/socket.io.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.js"></script>
    <script src="script.js"></script>
-   <script src="server.js"></script>
+
+
+   <div class="desc__block">
+    <div class="desc__row">
+        <div class="rows">
+            <div class="desc__num" style="background-color: green">1</div>
+            <p class="desc__text">Կանաչը ☘️🍀 խոտն է, որը բազմանում է N ցիկլը մեկ,մահանում է երբ նրան ուտում է
+                խոտակերը, կամ այրում է
+                կրակը, կամ նրան կոխկրտում է գիշատիչը</p>
+        </div>
+    </div>
+    <div class="desc__row">
+        <div class="rows">
+            <div class="desc__num" style="background-color: orange">2</div>
+            <p class="desc__text">Դեղինը 🐂 խոտակերն է, որը բազմանում է N հատ խոտ ուտելուց հետո և մահանում է N հատ
+                չուտելուց հետո, կամ
+                երբ նրան ուտում է գիշատիչը, կամ երբ նրան այրում է կրակը:</p>
+        </div>
+    </div>
+    <div class="desc__row">
+        <div class="rows">
+            <div class="desc__num" style="background-color: red">3</div>
+            <p class="desc__text">Կարմիրը 🐯 գիշատիչն է, որը բազմանում է N հատ խոտ կամ խոտակեր ուտելուց հետո և
+                մահանում է N հատ չուտելուց
+                հետո կամ երբ նրան սպանում է վորսորդը:</p>
+        </div>
+    </div>
+    <div class="desc__row">
+        <div class="rows">
+            <div class="desc__num" style="background-color: deepskyblue">4</div>
+            <p class="desc__text">Բաց կապույտը 💧 ջուրն է, որը իր հետ բերում է դաշտ խոտակերներին:</p>
+        </div>
+    </div>
+    <div class="desc__row">
+        <div class="rows">
+            <div class="desc__num" style="background-color: rgb(160, 153, 153)">5</div>
+            <p class="desc__text">Սևը 🐰 որսորդն է, որը սպանում է գիշատիչին, որսորդները չեն մահանում:</p>
+        </div>
+    </div>
+    <div class="desc__row">
+        <div class="rows">
+            <div class="desc__num" style="background-color: rgb(255, 149, 0)">6</div>
+            <p class="desc__text">Մուգ կապույտը 🔥 ամպն է, նրան անվանել եմ խոտաբույս, նրա անցաց ճանապարհով աճում է
+                խոտ:</p>
+        </div>
+    </div>
+    <div class="desc__row">
+        <div class="rows">
+            <div class="desc__num" style="background-color: rgb(225, 0, 255)">7</div>
+            <p class="desc__text">Մուգ կապույտը 🌸 ամպն է, նրան անվանել եմ խոտաբույս, նրա անցաց ճանապարհով աճում է
+                խոտ:</p>
+        </div>
+    </div>
+</div>
+
+   
 </body>
 </html>

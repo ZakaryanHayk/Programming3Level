@@ -1,0 +1,17 @@
+  .color-changing-text {
+    animation: color-change 2s infinite;
+  }
+  
+  @keyframes color-change {
+    0% {
+      color: red;
+    }
+    50% {
+      color: blue;
+    }
+    100% {
+      color: rgb(255, 149, 0);
+    }
+  }
+  
+  

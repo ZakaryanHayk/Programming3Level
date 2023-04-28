@@ -1,5 +1,5 @@
 var socket = io()
-let side = 30
+var side = 30
 ///օբյեկտներ պահելու զանգվածներ
 
 
