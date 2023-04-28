@@ -190,3 +190,5 @@ setInterval(game,300)
 io.on("connection",function(){
         createObject()
 })
+
+//sds
