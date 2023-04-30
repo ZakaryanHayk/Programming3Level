@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href ="animtext.css">
-    <link rel="stylesheet" href ="box.css">
+    <link rel="stylesheet" href ="style.css">
     <title>Hayk Zakaryan</title>
     <style>
         
 
         canvas {
+
             margin-left: 33%;
             margin-top: 2%;
         }
@@ -52,55 +52,71 @@
    <script src="https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.js"></script>
    <script src="script.js"></script>
 
+   <div>
+    <button onclick="AddGrass()" style="background-color: green">Add Grass</button>
+    <button onclick="AddGrassEater()" style="background-color: yellow; color: black">Add GrassEater</button>
+    <button onclick="AddPredator()" style="background-color: red">Add Predator</button>
+    <button onclick="AddFlower()" style="background-color: rgb(238, 0, 255)">Add Flower</button>
+    <button onclick="AddRabbit()" style="background-color: rgb(232, 220, 220)">Add Rabbit</button>
+    <button onclick="AddWater()" style="background-color: rgb(0, 157, 255)">Add Water</button>
+    <button onclick="AddFire()" style="background-color: rgb(255, 149, 0)">Add Fire</button>
+
+</div>
+
+<div class="exanak__btns">
+    <button onclick="Spring()" class="btn__exanak" style="background-color: darkgreen">Spring</button>
+    <button onclick="Summer()" class="btn__exanak" style="background-color: #79a83b">Summer</button>
+    <button onclick="Autumn()" class="btn__exanak" style="background-color: #ff8453">Autumn</button>
+    <button onclick="Winter()" class="btn__exanak" style="background-color: #ffffff">Winter</button>
+</div>
 
    <div class="desc__block">
     <div class="desc__row">
         <div class="rows">
             <div class="desc__num" style="background-color: green">1</div>
-            <p class="desc__text">Կանաչը ☘️🍀 խոտն է, որը բազմանում է N ցիկլը մեկ,մահանում է երբ նրան ուտում է
+            <p class="desc__text">Կանաչը 🍀 խոտն է, որը բազմանում է անվերջ քանակությամբ,մահանում է երբ նրան ուտում է
                 խոտակերը, կամ այրում է
-                կրակը, կամ նրան կոխկրտում է գիշատիչը</p>
+                կրակը, կամ նրան ուտում է գիշատիչը</p>
         </div>
     </div>
     <div class="desc__row">
         <div class="rows">
             <div class="desc__num" style="background-color: orange">2</div>
-            <p class="desc__text">Դեղինը 🐂 խոտակերն է, որը բազմանում է N հատ խոտ ուտելուց հետո և մահանում է N հատ
-                չուտելուց հետո, կամ
+            <p class="desc__text">Դեղինը 🐂 խոտակերն է, որը բազմանում է խոտ ուտելուց հետո և մահանում է երկար ժամանակ խոտ չուտելուց, կամ
                 երբ նրան ուտում է գիշատիչը, կամ երբ նրան այրում է կրակը:</p>
         </div>
     </div>
     <div class="desc__row">
         <div class="rows">
             <div class="desc__num" style="background-color: red">3</div>
-            <p class="desc__text">Կարմիրը 🐯 գիշատիչն է, որը բազմանում է N հատ խոտ կամ խոտակեր ուտելուց հետո և
-                մահանում է N հատ չուտելուց
-                հետո կամ երբ նրան սպանում է վորսորդը:</p>
+            <p class="desc__text">Կարմիրը 🐯 գիշատիչն է, որը բազմանում է խոտ կամ խոտակեր ուտելուց հետո և
+                մահանում է երկար ժամանակ խոտ չուտելուց
+                հետո:</p>
         </div>
     </div>
     <div class="desc__row">
         <div class="rows">
             <div class="desc__num" style="background-color: deepskyblue">4</div>
-            <p class="desc__text">Բաց կապույտը 💧 ջուրն է, որը իր հետ բերում է դաշտ խոտակերներին:</p>
+            <p class="desc__text">Բաց կապույտը 💧 ջուրն է, որը վերացնում է կրակին:</p>
         </div>
     </div>
     <div class="desc__row">
         <div class="rows">
             <div class="desc__num" style="background-color: rgb(160, 153, 153)">5</div>
-            <p class="desc__text">Սևը 🐰 որսորդն է, որը սպանում է գիշատիչին, որսորդները չեն մահանում:</p>
+            <p class="desc__text">Սպիտակը 🐰 նապաստակն է, որը ուտում է ծաղիկներին և մահանում գիշատիչներից,:</p>
         </div>
     </div>
     <div class="desc__row">
         <div class="rows">
             <div class="desc__num" style="background-color: rgb(255, 149, 0)">6</div>
-            <p class="desc__text">Մուգ կապույտը 🔥 ամպն է, նրան անվանել եմ խոտաբույս, նրա անցաց ճանապարհով աճում է
+            <p class="desc__text">Նարնջագույնը 🔥 կրակն է, որը վառում է բոլորին բացի ջրից:
                 խոտ:</p>
         </div>
     </div>
     <div class="desc__row">
         <div class="rows">
             <div class="desc__num" style="background-color: rgb(225, 0, 255)">7</div>
-            <p class="desc__text">Մուգ կապույտը 🌸 ամպն է, նրան անվանել եմ խոտաբույս, նրա անցաց ճանապարհով աճում է
+            <p class="desc__text">Վարդագույնը 🌸 ծաղիկն է, որը մահանում է նապաստակից:
                 խոտ:</p>
         </div>
     </div>
